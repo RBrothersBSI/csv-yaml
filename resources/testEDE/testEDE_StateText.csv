@@ -1,0 +1,9 @@
+#State Text Reference
+#Reference Number,Text 1 or Inactive-Text,Text 2 or Active-Text,Text 3
+1,Active,Inactive,
+2,Running,Off,
+3,TRUE,FALSE,
+4,Occupied,Unoccupied,
+5,Chiller2,Chiller1,
+6,Alarm,Normal,
+7,Auto,Chiller1,Chiller2

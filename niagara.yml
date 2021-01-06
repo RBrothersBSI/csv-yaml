@@ -1,0 +1,622 @@
+name: Niagara
+manufacturer: Niagara Test
+model: llll10000
+labels:
+- really
+- who
+- cares
+description: This is a test
+deviceResources:
+- name: OccupiedCoolingSP
+  description: 'Description:'
+  attributes:
+    type: analogValue
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: OccupiedHeatingSP
+  description: 'Description:'
+  attributes:
+    type: analogValue
+    instance: "2"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: UnoccupiedCoolingSP
+  description: 'Description:'
+  attributes:
+    type: analogValue
+    instance: "3"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: UnoccupiedHeatingSP
+  description: 'Description:'
+  attributes:
+    type: analogValue
+    instance: "4"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: Occupancy
+  description: 'Description:'
+  attributes:
+    type: binaryValue
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: TRUE/FALSE
+- name: CyclingFan
+  description: 'Description:'
+  attributes:
+    type: binaryValue
+    instance: "2"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: TRUE/FALSE
+- name: SpaceTemp
+  description: 'Description:'
+  attributes:
+    type: analogInput
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: SupplyAirTemp
+  description: 'Description:'
+  attributes:
+    type: analogInput
+    instance: "2"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: FanCommand
+  description: 'Description:'
+  attributes:
+    type: binaryOutput
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: TRUE/FALSE
+- name: EffectiveCoolingSP
+  description: 'Description:'
+  attributes:
+    type: analogValue
+    instance: "5"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: EffectiveHeatingSP
+  description: 'Description:'
+  attributes:
+    type: analogValue
+    instance: "6"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: fahrenheit
+- name: CoolStage1
+  description: 'Description:'
+  attributes:
+    type: binaryOutput
+    instance: "2"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: TRUE/FALSE
+- name: CoolStage2
+  description: 'Description:'
+  attributes:
+    type: binaryOutput
+    instance: "3"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: TRUE/FALSE
+deviceCommands: []
+coreCommands:
+- name: OccupiedCoolingSP
+  get:
+    path: /api/v1/device/{deviceId}/OccupiedCoolingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - OccupiedCoolingSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/OccupiedCoolingSP
+    parameterNames:
+    - OccupiedCoolingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: OccupiedHeatingSP
+  get:
+    path: /api/v1/device/{deviceId}/OccupiedHeatingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - OccupiedHeatingSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/OccupiedHeatingSP
+    parameterNames:
+    - OccupiedHeatingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: UnoccupiedCoolingSP
+  get:
+    path: /api/v1/device/{deviceId}/UnoccupiedCoolingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - UnoccupiedCoolingSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/UnoccupiedCoolingSP
+    parameterNames:
+    - UnoccupiedCoolingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: UnoccupiedHeatingSP
+  get:
+    path: /api/v1/device/{deviceId}/UnoccupiedHeatingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - UnoccupiedHeatingSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/UnoccupiedHeatingSP
+    parameterNames:
+    - UnoccupiedHeatingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: Occupancy
+  get:
+    path: /api/v1/device/{deviceId}/Occupancy
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - Occupancy
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/Occupancy
+    parameterNames:
+    - Occupancy
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CyclingFan
+  get:
+    path: /api/v1/device/{deviceId}/CyclingFan
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CyclingFan
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/CyclingFan
+    parameterNames:
+    - CyclingFan
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SpaceTemp
+  get:
+    path: /api/v1/device/{deviceId}/SpaceTemp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SpaceTemp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SupplyAirTemp
+  get:
+    path: /api/v1/device/{deviceId}/SupplyAirTemp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SupplyAirTemp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: FanCommand
+  get:
+    path: /api/v1/device/{deviceId}/FanCommand
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - FanCommand
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/FanCommand
+    parameterNames:
+    - FanCommand
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EffectiveCoolingSP
+  get:
+    path: /api/v1/device/{deviceId}/EffectiveCoolingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EffectiveCoolingSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/EffectiveCoolingSP
+    parameterNames:
+    - EffectiveCoolingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EffectiveHeatingSP
+  get:
+    path: /api/v1/device/{deviceId}/EffectiveHeatingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EffectiveHeatingSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/EffectiveHeatingSP
+    parameterNames:
+    - EffectiveHeatingSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CoolStage1
+  get:
+    path: /api/v1/device/{deviceId}/CoolStage1
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CoolStage1
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/CoolStage1
+    parameterNames:
+    - CoolStage1
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CoolStage2
+  get:
+    path: /api/v1/device/{deviceId}/CoolStage2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CoolStage2
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/CoolStage2
+    parameterNames:
+    - CoolStage2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
