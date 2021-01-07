@@ -12,7 +12,7 @@ import (
 func main() {
 	/////////////////////////
 	//Distech Logic
-	objectsFile, err := os.OpenFile("./resources/testEDE/testEDE_ede.csv", os.O_RDWR|os.O_CREATE, os.ModePerm)
+	objectsFile, err := os.OpenFile("./resources/ECBVAVN/ECBVAV_ede.csv", os.O_RDWR|os.O_CREATE, os.ModePerm)
 	if err != nil {
 		panic(err)
 	}
@@ -38,11 +38,11 @@ func main() {
 		cc = append(cc, &dPuts)
 	}
 	dp, _ := domain.NewProfile(
-		"Distech S100 Chiller Plant",
+		"Distech ECB-VAVN",
 		"Distech",
-		"S100",
+		"ECB-VAVN",
 		[]string{"distech", "CH", "LL"},
-		"Distech chiller plant programmed for 2 chiller lead/lag/failover",
+		"ECB-VAVN configurable program",
 		dr,
 		cc,
 	)
@@ -59,7 +59,7 @@ func main() {
 
 	///////////////////////
 	//Niagara Logic
-	niagaraFile, err := os.OpenFile("./resources/niagara/niagara.csv", os.O_RDWR|os.O_CREATE, os.ModePerm)
+	niagaraFile, err := os.OpenFile("./resources/niagara/vavNiagara.csv", os.O_RDWR|os.O_CREATE, os.ModePerm)
 	if err != nil {
 		panic(err)
 	}

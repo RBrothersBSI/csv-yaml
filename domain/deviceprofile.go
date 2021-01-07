@@ -92,7 +92,7 @@ func NewProfile(name string, manufacturer string, model string, labels []string,
 func ObjToDeviceResource(obj Object) (DeviceResource, error){
 	dr := DeviceResource{
 		Name:        obj.GetName(),
-		Description: "Description:" + obj.GetDescription(),
+		Description: obj.GetDescription(),
 		Attributes:  Attribute{
 				Type: obj.GetBACType(),
 				Instance: obj.GetObjectId(),

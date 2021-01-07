@@ -1,412 +1,14 @@
-name: Distech S100 Chiller Plant
+name: Distech ECB-VAVN
 manufacturer: Distech
-model: S100
+model: ECB-VAVN
 labels:
 - distech
 - CH
 - LL
-description: Distech chiller plant programmed for 2 chiller lead/lag/failover
+description: ECB-VAVN configurable program
 deviceResources:
-- name: Chiller1Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "101"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: CHWPump1Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "102"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: CWPump1Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "103"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: Tower1Fan1Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "104"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: CHWSupplyTemp
-  description: 'Description:'
-  attributes:
-    type: "0"
-    instance: "105"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-fahrenheit
-- name: CHWReturnTemp
-  description: 'Description:'
-  attributes:
-    type: "0"
-    instance: "106"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-fahrenheit
-- name: CWReturnTemp
-  description: 'Description:'
-  attributes:
-    type: "0"
-    instance: "107"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-fahrenheit
-- name: CWSupplyTemp
-  description: 'Description:'
-  attributes:
-    type: "0"
-    instance: "108"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-fahrenheit
-- name: Chiller1SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "101"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CHWPump1SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "102"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CWPump1SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "103"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Tower1Fan1SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "104"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Tower1Fan2SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "105"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Tower2FanSpeed
-  description: 'Description:'
-  attributes:
-    type: "1"
-    instance: "106"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: percent
-- name: Chiller2Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "201"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: CHWPump2Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "202"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: CWPump2Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "203"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: Tower2FanStatus
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "204"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: Tower1Fan2Status
-  description: 'Description:'
-  attributes:
-    type: "3"
-    instance: "205"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Running/Off
-- name: OAHumdity
-  description: 'Description:'
-  attributes:
-    type: "0"
-    instance: "206"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: volts
-- name: CWReturnTemp1
-  description: 'Description:'
-  attributes:
-    type: "0"
-    instance: "207"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-fahrenheit
-- name: Chiller2SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "201"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CHWPump2SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "202"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CWPump2SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "203"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: TowerFan2SS
-  description: 'Description:'
-  attributes:
-    type: "4"
-    instance: "204"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: TowerFan2Speed
-  description: 'Description:'
-  attributes:
-    type: "1"
-    instance: "205"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: percent
-- name: CHWSupplySP
-  description: 'Description:'
+- name: ActFlow
+  description: Actual Flow Reading
   attributes:
     type: "2"
     instance: "1"
@@ -420,12 +22,27 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: OATempLockoutSP
-  description: 'Description:'
+      defaultValue: cubic-feet-per-minute
+- name: HeatOut1
+  description: Heating Output 1
   attributes:
-    type: "2"
-    instance: "2"
+    type: "4"
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: ""
+- name: DischTempHWI
+  description: Discharge Temperature
+  attributes:
+    type: "0"
+    instance: "1"
     property: presentValue
     index: none
   properties:
@@ -437,11 +54,11 @@ deviceResources:
       type: String
       readWrite: R
       defaultValue: degrees-fahrenheit
-- name: FreezeProtectionSP
-  description: 'Description:'
+- name: HardwareInput2
+  description: ""
   attributes:
-    type: "2"
-    instance: "3"
+    type: "0"
+    instance: "2"
     property: presentValue
     index: none
   properties:
@@ -452,26 +69,59 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: OccupancyCmd
-  description: 'Description:'
+      defaultValue: ohms
+- name: ActFlowSP
+  description: Actual Flow Setpoint
   attributes:
-    type: "5"
-    instance: "1"
+    type: "2"
+    instance: "2"
     property: presentValue
     index: none
   properties:
     value:
-      type: Bool
+      type: Float32
       readWrite: RW
+      floatEncoding: eNotation
     units:
       type: String
       readWrite: R
-      defaultValue: Occupied/Unoccupied
-- name: LeadChiller
-  description: 'Description:'
+      defaultValue: cubic-feet-per-minute
+- name: SpaceTemp
+  description: Actual Space Temperature
   attributes:
-    type: "5"
+    type: "2"
+    instance: "5"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: DuctInTemp
+  description: Duct Inlet Temperature
+  attributes:
+    type: "2"
+    instance: "6"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: HardwareOutput2
+  description: ""
+  attributes:
+    type: "4"
     instance: "2"
     property: presentValue
     index: none
@@ -482,117 +132,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: Chiller2/Chiller1
-- name: CW_SP
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "4"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: LowCWTemp
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "3"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: HighCWTemp
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "4"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: UseChillerStaging
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "5"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: UseTowerStaging
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "6"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: FirstStgTowerOffDB
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "5"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: SecondStgTowerOnDB
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "6"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: ThirdStageTowerOnDB
-  description: 'Description:'
+      defaultValue: ""
+- name: SetPtOffset
+  description: SetPoint Offset
   attributes:
     type: "2"
     instance: "7"
@@ -606,9 +148,24 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: CWHighLimit
-  description: 'Description:'
+      defaultValue: delta-degrees-Fahrenheit
+- name: UnitStatus
+  description: Unit Status from AHU
+  attributes:
+    type: "5"
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Auto/Heat
+- name: OutdoorTemp
+  description: Outdoor Air Temperature
   attributes:
     type: "2"
     instance: "8"
@@ -622,9 +179,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: CWLowLimit
-  description: 'Description:'
+      defaultValue: degrees-fahrenheit
+- name: DamperOvr
+  description: Damper Override
   attributes:
     type: "2"
     instance: "9"
@@ -638,9 +195,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: TowerApproachSP
-  description: 'Description:'
+      defaultValue: percent
+- name: CO2Sensor
+  description: Actual CO2 Detection
   attributes:
     type: "2"
     instance: "10"
@@ -654,9 +211,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: CWSPHigh
-  description: 'Description:'
+      defaultValue: parts-per-million
+- name: Shedding
+  description: Shedding Demand (0-100%)
   attributes:
     type: "2"
     instance: "11"
@@ -670,9 +227,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: CWSPLow
-  description: 'Description:'
+      defaultValue: percent
+- name: DischAirSP
+  description: Discharge Air Setpoint
   attributes:
     type: "2"
     instance: "12"
@@ -687,23 +244,88 @@ deviceResources:
       type: String
       readWrite: R
       defaultValue: degrees-Fahrenheit
-- name: SingleTowerOperation
-  description: 'Description:'
+- name: TempErr
+  description: Temperature deviation vs Setpoint
   attributes:
-    type: "5"
-    instance: "7"
+    type: "2"
+    instance: "51"
     property: presentValue
     index: none
   properties:
     value:
-      type: Bool
+      type: Float32
       readWrite: RW
+      floatEncoding: eNotation
     units:
       type: String
       readWrite: R
-      defaultValue: TRUE/FALSE
-- name: MinPumpRuntime
-  description: 'Description:'
+      defaultValue: degrees-fahrenheit
+- name: CO2Setpoint
+  description: Space CO2 Setpoint
+  attributes:
+    type: "2"
+    instance: "52"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: parts-per-million
+- name: CO2Load
+  description: CO2 Load (0-100%)
+  attributes:
+    type: "2"
+    instance: "53"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: CommFailDelay
+  description: Communication Failure Delay
+  attributes:
+    type: "2"
+    instance: "54"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: seconds
+- name: MaxDischAirSP
+  description: Maximum Discharge Air Setpoint for Duct Heater Reheat
+  attributes:
+    type: "2"
+    instance: "56"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: Heat1
+  description: Heat1 Output Control
   attributes:
     type: "2"
     instance: "13"
@@ -717,69 +339,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: minutes
-- name: CHWPump1Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "8"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: CHWPump2Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "9"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: CWPump1Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "10"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: CWPump2Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "11"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: LeadLagInterval
-  description: 'Description:'
+      defaultValue: percent
+- name: Heat2
+  description: Heat2 Output Control
   attributes:
     type: "2"
     instance: "14"
@@ -793,24 +355,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: days
-- name: PidLoop1
-  description: 'Description:'
-  attributes:
-    type: "12"
-    instance: "1"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: String
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
       defaultValue: percent
-- name: MinChillerOnTime
-  description: 'Description:'
+- name: Heat3
+  description: Heat3 Output Control
   attributes:
     type: "2"
     instance: "15"
@@ -824,9 +371,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: minutes
-- name: MinChillerOffTime
-  description: 'Description:'
+      defaultValue: percent
+- name: DischargeTemp
+  description: Discharge Air Temperature
   attributes:
     type: "2"
     instance: "16"
@@ -840,393 +387,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: minutes
-- name: ChillerStagerPropBand
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "17"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: minutes
-- name: ChillerStagerIntTime
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "18"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: seconds
-- name: ChillerRampTime
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "19"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: seconds
-- name: Tower1Fan1Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "12"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: Tower2FanAlarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "13"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: PidLoop2
-  description: 'Description:'
-  attributes:
-    type: "12"
-    instance: "2"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: String
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: percent
-- name: TowerStagerPropBand
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "20"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: no-unit
-- name: TowerStagerIntTime
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "21"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: seconds
-- name: TowerRampTime
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "22"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: seconds
-- name: OutsideAir
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "23"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: PumpStopDelay
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "24"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: seconds
-- name: CHWPump1AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "14"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: FreezeProtection
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "15"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CHWPump2AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "16"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CWPump1AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "17"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: CWPump2AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "18"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Tower1FanAlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "19"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: TowerFan2AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "20"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: OutsideHumidity
-  description: 'Description:'
-  attributes:
-    type: "2"
-    instance: "25"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Float32
-      readWrite: RW
-      floatEncoding: eNotation
-    units:
-      type: String
-      readWrite: R
-      defaultValue: percent
-- name: Chiller1AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "21"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Chiller1Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "22"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: Chiller2AlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "23"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Chiller2Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "24"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: Tower2FanAlarmReset
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "25"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: TRUE/FALSE
-- name: Tower1Fan2Alarm
-  description: 'Description:'
-  attributes:
-    type: "5"
-    instance: "26"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: Bool
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Alarm/Normal
-- name: DewPoint
-  description: 'Description:'
+      defaultValue: degrees-fahrenheit
+- name: MinFlowSP
+  description: Minimum Flow Setpoint
   attributes:
     type: "2"
     instance: "26"
@@ -1240,24 +403,9 @@ deviceResources:
     units:
       type: String
       readWrite: R
-      defaultValue: degrees-Fahrenheit
-- name: ChillerSelect
-  description: 'Description:'
-  attributes:
-    type: "19"
-    instance: "1"
-    property: presentValue
-    index: none
-  properties:
-    value:
-      type: String
-      readWrite: RW
-    units:
-      type: String
-      readWrite: R
-      defaultValue: Auto/Chiller1
-- name: PlantOutsideAir
-  description: 'Description:'
+      defaultValue: cubic-feet-per-minute
+- name: MaxFlowCoolSP
+  description: Cooling Maximum Flow Setpoint
   attributes:
     type: "2"
     instance: "27"
@@ -1271,153 +419,1486 @@ deviceResources:
     units:
       type: String
       readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: MinFlowHeatSP
+  description: Heating Minimum Flow Setpoint
+  attributes:
+    type: "2"
+    instance: "28"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: MaxFlowHeatSP
+  description: Heating Maximum Flow Setpoint
+  attributes:
+    type: "2"
+    instance: "29"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: MinFlowStbySP
+  description: Standby Minimum Flow Setpoint
+  attributes:
+    type: "2"
+    instance: "30"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: MinFlowUnoccSP
+  description: Unoccupied Minimum Flow Setpoint
+  attributes:
+    type: "2"
+    instance: "31"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: KFactor
+  description: Internal Flow Sensor K Factor
+  attributes:
+    type: "2"
+    instance: "32"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: no-unit
+- name: FlowCalib
+  description: Internal Flow Sensor Calibration
+  attributes:
+    type: "2"
+    instance: "33"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: DamperResp
+  description: Damper Response
+  attributes:
+    type: "2"
+    instance: "34"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: DamperSpeed
+  description: Damper Speed
+  attributes:
+    type: "2"
+    instance: "35"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
       defaultValue: seconds
+- name: ActCoolSP
+  description: Actual Cooling Setpoint
+  attributes:
+    type: "2"
+    instance: "36"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: ActHeatSP
+  description: Actual Heating Setpoint
+  attributes:
+    type: "2"
+    instance: "37"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: UnoccCoolSP
+  description: Unoccupied Cooling Setpoint
+  attributes:
+    type: "2"
+    instance: "38"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: StandbyCoolSP
+  description: Standby Cooling Setpoint
+  attributes:
+    type: "2"
+    instance: "39"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: OccCoolSP
+  description: Occupied Cooling Setpoint
+  attributes:
+    type: "2"
+    instance: "40"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: OccHeatSP
+  description: Occupied Heating Setpoint
+  attributes:
+    type: "2"
+    instance: "41"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: StandbyHeatSP
+  description: Standby Heating Setpoint
+  attributes:
+    type: "2"
+    instance: "42"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: UnoccHeatSP
+  description: Unoccupied Heating Setpoint
+  attributes:
+    type: "2"
+    instance: "43"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: TerminalLoad
+  description: Terminal Load
+  attributes:
+    type: "2"
+    instance: "44"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: TerminalLoadF
+  description: Terminal Load Factorized
+  attributes:
+    type: "2"
+    instance: "45"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: ChgOverDelay
+  description: Change Over Delay (Heat/Cool)
+  attributes:
+    type: "2"
+    instance: "46"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: minutes
+- name: BypassTime
+  description: Bypass Mode Override Time
+  attributes:
+    type: "2"
+    instance: "47"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: minutes
+- name: MaxOatDuctHeat
+  description: Maximum Outside Air Temperature for Duct Heater
+  attributes:
+    type: "2"
+    instance: "48"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: MaxOatPerimHeat
+  description: Maximum Outside Air Temperature for Perimeter Heat
+  attributes:
+    type: "2"
+    instance: "49"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: EffectSP
+  description: Effective Space Temperature Setpoint
+  attributes:
+    type: "2"
+    instance: "50"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: OccupancyCmd
+  description: Occupancy Command
+  attributes:
+    type: "19"
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Active/Inactive
+- name: DamperReq
+  description: Damper Request for Static Pressure Reset
+  attributes:
+    type: "2"
+    instance: "57"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: no-unit
+- name: ComSensorSpOffset
+  description: Communicating Sensor Sp Offset
+  attributes:
+    type: "2"
+    instance: "58"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: delta-degrees-Fahrenheit
+- name: SpOffsetLimit
+  description: Setpoint Offset Limits
+  attributes:
+    type: "2"
+    instance: "59"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: delta-degrees-Fahrenheit
+- name: TerminalLoadHF
+  description: Terminal Load Heat Factor
+  attributes:
+    type: "2"
+    instance: "66"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: TerminalLoadCF
+  description: Terminal Load Cool Factor
+  attributes:
+    type: "2"
+    instance: "67"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: HeatModeTempErr
+  description: Heating Mode Temperature Error
+  attributes:
+    type: "2"
+    instance: "68"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: CoolModeTempErr
+  description: Cooling Mode Temperature Error
+  attributes:
+    type: "2"
+    instance: "69"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: DuctHeatLoad
+  description: Actual Duct Heater Total Load for graphics
+  attributes:
+    type: "2"
+    instance: "73"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: PerimHeatLoad
+  description: Actual Perimeter Heat Load for graphics
+  attributes:
+    type: "2"
+    instance: "74"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: ComSensorMinCoolSP
+  description: Communicating Sensor Minimum Cooling Setpoint
+  attributes:
+    type: "2"
+    instance: "75"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: ComSensorMaxCoolSP
+  description: Communicating Sensor Maximum Cooling Setpoint
+  attributes:
+    type: "2"
+    instance: "76"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: ComSensorMinHeatSP
+  description: Communicating Sensor Minimum Heating Setpoint
+  attributes:
+    type: "2"
+    instance: "77"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: ComSensorMaxHeatSP
+  description: Communicating Sensor Maximum Heating Setpoint
+  attributes:
+    type: "2"
+    instance: "78"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-Fahrenheit
+- name: SleepTime
+  description: EC-Smart-Comfort Sleep Time
+  attributes:
+    type: "2"
+    instance: "79"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: seconds
+- name: EnDelayVPACC
+  description: VPACC Enable Delay
+  attributes:
+    type: "2"
+    instance: "80"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: minutes
+- name: CUSUM_K_VPACC
+  description: VPACC CUSUM K Param
+  attributes:
+    type: "2"
+    instance: "81"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: no-unit
+- name: SpaceTempStdErr
+  description: 'VPACC Space Temperature Standard Error '
+  attributes:
+    type: "2"
+    instance: "82"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: SpaceTempErrAlmSp
+  description: VPACC Space Temperature Alarm Setpoint
+  attributes:
+    type: "2"
+    instance: "83"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: AirFlowStdErr
+  description: 'VPACC Air Flow Standard Error '
+  attributes:
+    type: "2"
+    instance: "84"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: AirFlowErrAlmSp
+  description: VPACC Flow Alarm Setpoint
+  attributes:
+    type: "2"
+    instance: "85"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: DischTempStdErr
+  description: 'VPACC Discharge Temperature Standard Error '
+  attributes:
+    type: "2"
+    instance: "86"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: DischTempErrAlmSp
+  description: VPACC Discharge Temperature Alarm Setpoint
+  attributes:
+    type: "2"
+    instance: "87"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: SpaceTempPosErr
+  description: VPACC Positive Space Temperature CUSUM
+  attributes:
+    type: "2"
+    instance: "88"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: SpaceTempNegErr
+  description: VPACC Negative Space Temperature CUSUM
+  attributes:
+    type: "2"
+    instance: "89"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: AirFlowPosErr
+  description: VPACC Positive Flow CUSUM
+  attributes:
+    type: "2"
+    instance: "90"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: AirFlowNegErr
+  description: VPACC Negative Flow CUSUM
+  attributes:
+    type: "2"
+    instance: "91"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: AirFlowAbsErr
+  description: VPACC Absolute Flow CUSUM
+  attributes:
+    type: "2"
+    instance: "92"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: cubic-feet-per-minute
+- name: DischTempPosErr
+  description: VPACC Positive Discharge Temperature CUSUM
+  attributes:
+    type: "2"
+    instance: "93"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: DischTempNegErr
+  description: VPACC Negative Discharge Temperature CUSUM
+  attributes:
+    type: "2"
+    instance: "94"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: Elevation
+  description: ""
+  attributes:
+    type: "2"
+    instance: "99"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: meters
+- name: AppVersion
+  description: ""
+  attributes:
+    type: "2"
+    instance: "100"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: no-unit
+- name: DamperDir
+  description: Damper Direction (Off = CW)
+  attributes:
+    type: "5"
+    instance: "11"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: VVTMode
+  description: Box is not Using Flow Sensor
+  attributes:
+    type: "5"
+    instance: "12"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: CommFailure
+  description: Communication Failure from AHU
+  attributes:
+    type: "5"
+    instance: "13"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: DuctInTempValid
+  description: Duct Inlet Temperature Validation for PxPages
+  attributes:
+    type: "5"
+    instance: "14"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: DisHtCl_WrmUp
+  description: Disable Heat & Cool during Mrng Warm Up & Night Purge
+  attributes:
+    type: "5"
+    instance: "15"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: HotWaterReheat
+  description: 'Hot Water Reheat '
+  attributes:
+    type: "5"
+    instance: "18"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: DualMaximum
+  description: Dual Maximum Control of Air Flow Setpoints
+  attributes:
+    type: "5"
+    instance: "19"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: InitDamper
+  description: Initialize Internal Actuator
+  attributes:
+    type: "5"
+    instance: "49"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: DoZeroCalib
+  description: Do Zero Calibration for Internal Flow Sensor
+  attributes:
+    type: "5"
+    instance: "50"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Bool
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Deg.C/Deg.F
+- name: HVACModeCmd
+  description: HVAC Mode Command
+  attributes:
+    type: "19"
+    instance: "2"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: False/True
+- name: SensorTempUnits
+  description: Communicating Sensor Temperature Units
+  attributes:
+    type: "19"
+    instance: "11"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Occupied/Unoccupied
+- name: SensorFlowUnits
+  description: Communicating Sensor Flow Units
+  attributes:
+    type: "19"
+    instance: "12"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Occupied/Unoccupied
+- name: HeatPriority
+  description: Duct vs Perimeter Heat Priority
+  attributes:
+    type: "19"
+    instance: "13"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Occupied/Unoccupied
+- name: HVACModeStatus
+  description: HVAC Mode Status
+  attributes:
+    type: "19"
+    instance: "14"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: False/True
+- name: OccupancyStatus
+  description: Occupancy Status
+  attributes:
+    type: "19"
+    instance: "15"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Active/Inactive
+- name: ComSensorSpType
+  description: Communicating Sensor Setpoint Type
+  attributes:
+    type: "19"
+    instance: "16"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Occupied/Unoccupied
+- name: OccDetection
+  description: Occupancy Detection
+  attributes:
+    type: "19"
+    instance: "17"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Occupied/Unoccupied
+- name: WindowContact
+  description: Window Contact
+  attributes:
+    type: "19"
+    instance: "18"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Clockwise/CounterClockwise
+- name: ComSensorLock
+  description: Communicating Sensor Lock
+  attributes:
+    type: "19"
+    instance: "19"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Clockwise/CounterClockwise
+- name: HeatStgs
+  description: Number of Heat Stages
+  attributes:
+    type: "19"
+    instance: "28"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Clockwise/CounterClockwise
+- name: DuctHeatStgs
+  description: Number of Duct Heaters
+  attributes:
+    type: "19"
+    instance: "29"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Clockwise/CounterClockwise
+- name: EcoVueCoolStatus
+  description: EcoVue Actual Cooling Icon
+  attributes:
+    type: "19"
+    instance: "30"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: No/Yes
+- name: EcoVueHeatStatus
+  description: EcoVue Actual Heating Icon
+  attributes:
+    type: "19"
+    instance: "31"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: No/Yes
+- name: EquipType1
+  description: Equipement Type for Reheat1
+  attributes:
+    type: "19"
+    instance: "32"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: No/Yes
+- name: EquipType2
+  description: Equipement Type for Reheat2
+  attributes:
+    type: "19"
+    instance: "33"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: No/Yes
+- name: EquipType3
+  description: Equipement Type for Reheat3
+  attributes:
+    type: "19"
+    instance: "34"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: No/Yes
+- name: BalancingOvr
+  description: Balancing Override
+  attributes:
+    type: "19"
+    instance: "39"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: No/Yes
+- name: VPACCStatus
+  description: VPACC Status Reporting
+  attributes:
+    type: "19"
+    instance: "40"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Auto/Heat
+- name: CodeType
+  description: Code Type
+  attributes:
+    type: "19"
+    instance: "50"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: Auto/Heat
+- name: PID_Cool
+  description: ""
+  attributes:
+    type: "12"
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: PID_Heat
+  description: ""
+  attributes:
+    type: "12"
+    instance: "2"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: PID_CO2
+  description: ""
+  attributes:
+    type: "12"
+    instance: "3"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: PID_DischAir
+  description: ""
+  attributes:
+    type: "12"
+    instance: "4"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: ComSensor1_SpaceTemp
+  description: ComSensor 1 SpaceTemp
+  attributes:
+    type: "0"
+    instance: "5001"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: degrees-fahrenheit
+- name: Schedule1
+  description: ""
+  attributes:
+    type: "17"
+    instance: "1"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: String
+      readWrite: RW
+    units:
+      type: String
+      readWrite: R
+      defaultValue: ""
+- name: VAVDifferentialPressure
+  description: ""
+  attributes:
+    type: "0"
+    instance: "5"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: inches-of-water
+- name: InternalActuator_ActuatorSetpoint
+  description: ActuatorSetpoint
+  attributes:
+    type: "2"
+    instance: "7"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: percent
+- name: InternalActuator_ActuatorPosition
+  description: ActuatorPosition
+  attributes:
+    type: "1"
+    instance: "6"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: ""
+- name: AnalogValue3
+  description: ""
+  attributes:
+    type: "2"
+    instance: "3"
+    property: presentValue
+    index: none
+  properties:
+    value:
+      type: Float32
+      readWrite: RW
+      floatEncoding: eNotation
+    units:
+      type: String
+      readWrite: R
+      defaultValue: no-unit
 deviceCommands: []
 coreCommands:
-- name: Chiller1Status
+- name: ActFlow
   get:
-    path: /api/v1/device/{deviceId}/Chiller1Status
+    path: /api/v1/device/{deviceId}/ActFlow
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - Chiller1Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWPump1Status
-  get:
-    path: /api/v1/device/{deviceId}/CHWPump1Status
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWPump1Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWPump1Status
-  get:
-    path: /api/v1/device/{deviceId}/CWPump1Status
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWPump1Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower1Fan1Status
-  get:
-    path: /api/v1/device/{deviceId}/Tower1Fan1Status
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower1Fan1Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWSupplyTemp
-  get:
-    path: /api/v1/device/{deviceId}/CHWSupplyTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWSupplyTemp
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWReturnTemp
-  get:
-    path: /api/v1/device/{deviceId}/CHWReturnTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWReturnTemp
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWReturnTemp
-  get:
-    path: /api/v1/device/{deviceId}/CWReturnTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWReturnTemp
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWSupplyTemp
-  get:
-    path: /api/v1/device/{deviceId}/CWSupplyTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWSupplyTemp
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Chiller1SS
-  get:
-    path: /api/v1/device/{deviceId}/Chiller1SS
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Chiller1SS
+      - ActFlow
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1428,9 +1909,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/Chiller1SS
+    path: /api/v1/device/{deviceId}/ActFlow
     parameterNames:
-    - Chiller1SS
+    - ActFlow
     responses:
     - code: "200"
       description: Success
@@ -1444,14 +1925,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: CHWPump1SS
+- name: HeatOut1
   get:
-    path: /api/v1/device/{deviceId}/CHWPump1SS
+    path: /api/v1/device/{deviceId}/HeatOut1
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - CHWPump1SS
+      - HeatOut1
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1462,9 +1943,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/CHWPump1SS
+    path: /api/v1/device/{deviceId}/HeatOut1
     parameterNames:
-    - CHWPump1SS
+    - HeatOut1
     responses:
     - code: "200"
       description: Success
@@ -1478,14 +1959,48 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: CWPump1SS
+- name: DischTempHWI
   get:
-    path: /api/v1/device/{deviceId}/CWPump1SS
+    path: /api/v1/device/{deviceId}/DischTempHWI
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - CWPump1SS
+      - DischTempHWI
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HardwareInput2
+  get:
+    path: /api/v1/device/{deviceId}/HardwareInput2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HardwareInput2
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ActFlowSP
+  get:
+    path: /api/v1/device/{deviceId}/ActFlowSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ActFlowSP
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1496,9 +2011,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/CWPump1SS
+    path: /api/v1/device/{deviceId}/ActFlowSP
     parameterNames:
-    - CWPump1SS
+    - ActFlowSP
     responses:
     - code: "200"
       description: Success
@@ -1512,14 +2027,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: Tower1Fan1SS
+- name: SpaceTemp
   get:
-    path: /api/v1/device/{deviceId}/Tower1Fan1SS
+    path: /api/v1/device/{deviceId}/SpaceTemp
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - Tower1Fan1SS
+      - SpaceTemp
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1530,9 +2045,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/Tower1Fan1SS
+    path: /api/v1/device/{deviceId}/SpaceTemp
     parameterNames:
-    - Tower1Fan1SS
+    - SpaceTemp
     responses:
     - code: "200"
       description: Success
@@ -1546,14 +2061,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: Tower1Fan2SS
+- name: DuctInTemp
   get:
-    path: /api/v1/device/{deviceId}/Tower1Fan2SS
+    path: /api/v1/device/{deviceId}/DuctInTemp
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - Tower1Fan2SS
+      - DuctInTemp
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1564,9 +2079,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/Tower1Fan2SS
+    path: /api/v1/device/{deviceId}/DuctInTemp
     parameterNames:
-    - Tower1Fan2SS
+    - DuctInTemp
     responses:
     - code: "200"
       description: Success
@@ -1580,14 +2095,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: Tower2FanSpeed
+- name: HardwareOutput2
   get:
-    path: /api/v1/device/{deviceId}/Tower2FanSpeed
+    path: /api/v1/device/{deviceId}/HardwareOutput2
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - Tower2FanSpeed
+      - HardwareOutput2
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1598,9 +2113,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/Tower2FanSpeed
+    path: /api/v1/device/{deviceId}/HardwareOutput2
     parameterNames:
-    - Tower2FanSpeed
+    - HardwareOutput2
     responses:
     - code: "200"
       description: Success
@@ -1614,133 +2129,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: Chiller2Status
+- name: SetPtOffset
   get:
-    path: /api/v1/device/{deviceId}/Chiller2Status
+    path: /api/v1/device/{deviceId}/SetPtOffset
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - Chiller2Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWPump2Status
-  get:
-    path: /api/v1/device/{deviceId}/CHWPump2Status
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWPump2Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWPump2Status
-  get:
-    path: /api/v1/device/{deviceId}/CWPump2Status
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWPump2Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower2FanStatus
-  get:
-    path: /api/v1/device/{deviceId}/Tower2FanStatus
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower2FanStatus
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower1Fan2Status
-  get:
-    path: /api/v1/device/{deviceId}/Tower1Fan2Status
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower1Fan2Status
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: OAHumdity
-  get:
-    path: /api/v1/device/{deviceId}/OAHumdity
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - OAHumdity
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWReturnTemp1
-  get:
-    path: /api/v1/device/{deviceId}/CWReturnTemp1
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWReturnTemp1
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Chiller2SS
-  get:
-    path: /api/v1/device/{deviceId}/Chiller2SS
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Chiller2SS
+      - SetPtOffset
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1751,9 +2147,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/Chiller2SS
+    path: /api/v1/device/{deviceId}/SetPtOffset
     parameterNames:
-    - Chiller2SS
+    - SetPtOffset
     responses:
     - code: "200"
       description: Success
@@ -1767,14 +2163,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: CHWPump2SS
+- name: UnitStatus
   get:
-    path: /api/v1/device/{deviceId}/CHWPump2SS
+    path: /api/v1/device/{deviceId}/UnitStatus
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - CHWPump2SS
+      - UnitStatus
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1785,9 +2181,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/CHWPump2SS
+    path: /api/v1/device/{deviceId}/UnitStatus
     parameterNames:
-    - CHWPump2SS
+    - UnitStatus
     responses:
     - code: "200"
       description: Success
@@ -1801,14 +2197,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: CWPump2SS
+- name: OutdoorTemp
   get:
-    path: /api/v1/device/{deviceId}/CWPump2SS
+    path: /api/v1/device/{deviceId}/OutdoorTemp
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - CWPump2SS
+      - OutdoorTemp
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1819,9 +2215,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/CWPump2SS
+    path: /api/v1/device/{deviceId}/OutdoorTemp
     parameterNames:
-    - CWPump2SS
+    - OutdoorTemp
     responses:
     - code: "200"
       description: Success
@@ -1835,14 +2231,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: TowerFan2SS
+- name: DamperOvr
   get:
-    path: /api/v1/device/{deviceId}/TowerFan2SS
+    path: /api/v1/device/{deviceId}/DamperOvr
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - TowerFan2SS
+      - DamperOvr
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1853,9 +2249,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/TowerFan2SS
+    path: /api/v1/device/{deviceId}/DamperOvr
     parameterNames:
-    - TowerFan2SS
+    - DamperOvr
     responses:
     - code: "200"
       description: Success
@@ -1869,14 +2265,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: TowerFan2Speed
+- name: CO2Sensor
   get:
-    path: /api/v1/device/{deviceId}/TowerFan2Speed
+    path: /api/v1/device/{deviceId}/CO2Sensor
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - TowerFan2Speed
+      - CO2Sensor
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1887,9 +2283,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/TowerFan2Speed
+    path: /api/v1/device/{deviceId}/CO2Sensor
     parameterNames:
-    - TowerFan2Speed
+    - CO2Sensor
     responses:
     - code: "200"
       description: Success
@@ -1903,14 +2299,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: CHWSupplySP
+- name: Shedding
   get:
-    path: /api/v1/device/{deviceId}/CHWSupplySP
+    path: /api/v1/device/{deviceId}/Shedding
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - CHWSupplySP
+      - Shedding
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1921,9 +2317,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/CHWSupplySP
+    path: /api/v1/device/{deviceId}/Shedding
     parameterNames:
-    - CHWSupplySP
+    - Shedding
     responses:
     - code: "200"
       description: Success
@@ -1937,14 +2333,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: OATempLockoutSP
+- name: DischAirSP
   get:
-    path: /api/v1/device/{deviceId}/OATempLockoutSP
+    path: /api/v1/device/{deviceId}/DischAirSP
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - OATempLockoutSP
+      - DischAirSP
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1955,9 +2351,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/OATempLockoutSP
+    path: /api/v1/device/{deviceId}/DischAirSP
     parameterNames:
-    - OATempLockoutSP
+    - DischAirSP
     responses:
     - code: "200"
       description: Success
@@ -1971,14 +2367,99 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: FreezeProtectionSP
+- name: TempErr
   get:
-    path: /api/v1/device/{deviceId}/FreezeProtectionSP
+    path: /api/v1/device/{deviceId}/TempErr
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - FreezeProtectionSP
+      - TempErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CO2Setpoint
+  get:
+    path: /api/v1/device/{deviceId}/CO2Setpoint
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CO2Setpoint
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CO2Load
+  get:
+    path: /api/v1/device/{deviceId}/CO2Load
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CO2Load
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CommFailDelay
+  get:
+    path: /api/v1/device/{deviceId}/CommFailDelay
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CommFailDelay
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MaxDischAirSP
+  get:
+    path: /api/v1/device/{deviceId}/MaxDischAirSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MaxDischAirSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: Heat1
+  get:
+    path: /api/v1/device/{deviceId}/Heat1
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - Heat1
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -1989,13 +2470,591 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/FreezeProtectionSP
+    path: /api/v1/device/{deviceId}/Heat1
     parameterNames:
-    - FreezeProtectionSP
+    - Heat1
     responses:
     - code: "200"
       description: Success
       expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: Heat2
+  get:
+    path: /api/v1/device/{deviceId}/Heat2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - Heat2
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/Heat2
+    parameterNames:
+    - Heat2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: Heat3
+  get:
+    path: /api/v1/device/{deviceId}/Heat3
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - Heat3
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/Heat3
+    parameterNames:
+    - Heat3
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DischargeTemp
+  get:
+    path: /api/v1/device/{deviceId}/DischargeTemp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DischargeTemp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/DischargeTemp
+    parameterNames:
+    - DischargeTemp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MinFlowSP
+  get:
+    path: /api/v1/device/{deviceId}/MinFlowSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MinFlowSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MaxFlowCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/MaxFlowCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MaxFlowCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MinFlowHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/MinFlowHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MinFlowHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MaxFlowHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/MaxFlowHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MaxFlowHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MinFlowStbySP
+  get:
+    path: /api/v1/device/{deviceId}/MinFlowStbySP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MinFlowStbySP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MinFlowUnoccSP
+  get:
+    path: /api/v1/device/{deviceId}/MinFlowUnoccSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MinFlowUnoccSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: KFactor
+  get:
+    path: /api/v1/device/{deviceId}/KFactor
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - KFactor
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: FlowCalib
+  get:
+    path: /api/v1/device/{deviceId}/FlowCalib
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - FlowCalib
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DamperResp
+  get:
+    path: /api/v1/device/{deviceId}/DamperResp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DamperResp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DamperSpeed
+  get:
+    path: /api/v1/device/{deviceId}/DamperSpeed
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DamperSpeed
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ActCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/ActCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ActCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ActHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/ActHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ActHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: UnoccCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/UnoccCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - UnoccCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: StandbyCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/StandbyCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - StandbyCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: OccCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/OccCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - OccCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/OccCoolSP
+    parameterNames:
+    - OccCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: OccHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/OccHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - OccHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/OccHeatSP
+    parameterNames:
+    - OccHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: StandbyHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/StandbyHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - StandbyHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+  put:
+    path: /api/v1/device/{deviceId}/StandbyHeatSP
+    parameterNames:
+    - StandbyHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues: []
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: UnoccHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/UnoccHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - UnoccHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: TerminalLoad
+  get:
+    path: /api/v1/device/{deviceId}/TerminalLoad
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - TerminalLoad
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: TerminalLoadF
+  get:
+    path: /api/v1/device/{deviceId}/TerminalLoadF
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - TerminalLoadF
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ChgOverDelay
+  get:
+    path: /api/v1/device/{deviceId}/ChgOverDelay
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ChgOverDelay
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: BypassTime
+  get:
+    path: /api/v1/device/{deviceId}/BypassTime
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - BypassTime
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MaxOatDuctHeat
+  get:
+    path: /api/v1/device/{deviceId}/MaxOatDuctHeat
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MaxOatDuctHeat
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: MaxOatPerimHeat
+  get:
+    path: /api/v1/device/{deviceId}/MaxOatPerimHeat
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - MaxOatPerimHeat
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EffectSP
+  get:
+    path: /api/v1/device/{deviceId}/EffectSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EffectSP
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -2039,14 +3098,694 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: LeadChiller
+- name: DamperReq
   get:
-    path: /api/v1/device/{deviceId}/LeadChiller
+    path: /api/v1/device/{deviceId}/DamperReq
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - LeadChiller
+      - DamperReq
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorSpOffset
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorSpOffset
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorSpOffset
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SpOffsetLimit
+  get:
+    path: /api/v1/device/{deviceId}/SpOffsetLimit
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SpOffsetLimit
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: TerminalLoadHF
+  get:
+    path: /api/v1/device/{deviceId}/TerminalLoadHF
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - TerminalLoadHF
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: TerminalLoadCF
+  get:
+    path: /api/v1/device/{deviceId}/TerminalLoadCF
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - TerminalLoadCF
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HeatModeTempErr
+  get:
+    path: /api/v1/device/{deviceId}/HeatModeTempErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HeatModeTempErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CoolModeTempErr
+  get:
+    path: /api/v1/device/{deviceId}/CoolModeTempErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CoolModeTempErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DuctHeatLoad
+  get:
+    path: /api/v1/device/{deviceId}/DuctHeatLoad
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DuctHeatLoad
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: PerimHeatLoad
+  get:
+    path: /api/v1/device/{deviceId}/PerimHeatLoad
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - PerimHeatLoad
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorMinCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorMinCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorMinCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorMaxCoolSP
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorMaxCoolSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorMaxCoolSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorMinHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorMinHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorMinHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorMaxHeatSP
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorMaxHeatSP
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorMaxHeatSP
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SleepTime
+  get:
+    path: /api/v1/device/{deviceId}/SleepTime
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SleepTime
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EnDelayVPACC
+  get:
+    path: /api/v1/device/{deviceId}/EnDelayVPACC
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EnDelayVPACC
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CUSUM_K_VPACC
+  get:
+    path: /api/v1/device/{deviceId}/CUSUM_K_VPACC
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CUSUM_K_VPACC
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SpaceTempStdErr
+  get:
+    path: /api/v1/device/{deviceId}/SpaceTempStdErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SpaceTempStdErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SpaceTempErrAlmSp
+  get:
+    path: /api/v1/device/{deviceId}/SpaceTempErrAlmSp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SpaceTempErrAlmSp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: AirFlowStdErr
+  get:
+    path: /api/v1/device/{deviceId}/AirFlowStdErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - AirFlowStdErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: AirFlowErrAlmSp
+  get:
+    path: /api/v1/device/{deviceId}/AirFlowErrAlmSp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - AirFlowErrAlmSp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DischTempStdErr
+  get:
+    path: /api/v1/device/{deviceId}/DischTempStdErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DischTempStdErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DischTempErrAlmSp
+  get:
+    path: /api/v1/device/{deviceId}/DischTempErrAlmSp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DischTempErrAlmSp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SpaceTempPosErr
+  get:
+    path: /api/v1/device/{deviceId}/SpaceTempPosErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SpaceTempPosErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SpaceTempNegErr
+  get:
+    path: /api/v1/device/{deviceId}/SpaceTempNegErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SpaceTempNegErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: AirFlowPosErr
+  get:
+    path: /api/v1/device/{deviceId}/AirFlowPosErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - AirFlowPosErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: AirFlowNegErr
+  get:
+    path: /api/v1/device/{deviceId}/AirFlowNegErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - AirFlowNegErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: AirFlowAbsErr
+  get:
+    path: /api/v1/device/{deviceId}/AirFlowAbsErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - AirFlowAbsErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DischTempPosErr
+  get:
+    path: /api/v1/device/{deviceId}/DischTempPosErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DischTempPosErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DischTempNegErr
+  get:
+    path: /api/v1/device/{deviceId}/DischTempNegErr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DischTempNegErr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: Elevation
+  get:
+    path: /api/v1/device/{deviceId}/Elevation
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - Elevation
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: AppVersion
+  get:
+    path: /api/v1/device/{deviceId}/AppVersion
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - AppVersion
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DamperDir
+  get:
+    path: /api/v1/device/{deviceId}/DamperDir
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DamperDir
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: VVTMode
+  get:
+    path: /api/v1/device/{deviceId}/VVTMode
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - VVTMode
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CommFailure
+  get:
+    path: /api/v1/device/{deviceId}/CommFailure
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CommFailure
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DuctInTempValid
+  get:
+    path: /api/v1/device/{deviceId}/DuctInTempValid
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DuctInTempValid
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DisHtCl_WrmUp
+  get:
+    path: /api/v1/device/{deviceId}/DisHtCl_WrmUp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DisHtCl_WrmUp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HotWaterReheat
+  get:
+    path: /api/v1/device/{deviceId}/HotWaterReheat
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HotWaterReheat
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DualMaximum
+  get:
+    path: /api/v1/device/{deviceId}/DualMaximum
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DualMaximum
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: InitDamper
+  get:
+    path: /api/v1/device/{deviceId}/InitDamper
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - InitDamper
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DoZeroCalib
+  get:
+    path: /api/v1/device/{deviceId}/DoZeroCalib
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DoZeroCalib
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HVACModeCmd
+  get:
+    path: /api/v1/device/{deviceId}/HVACModeCmd
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HVACModeCmd
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -2057,9 +3796,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/LeadChiller
+    path: /api/v1/device/{deviceId}/HVACModeCmd
     parameterNames:
-    - LeadChiller
+    - HVACModeCmd
     responses:
     - code: "200"
       description: Success
@@ -2073,14 +3812,473 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: CW_SP
+- name: SensorTempUnits
   get:
-    path: /api/v1/device/{deviceId}/CW_SP
+    path: /api/v1/device/{deviceId}/SensorTempUnits
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - CW_SP
+      - SensorTempUnits
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: SensorFlowUnits
+  get:
+    path: /api/v1/device/{deviceId}/SensorFlowUnits
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - SensorFlowUnits
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HeatPriority
+  get:
+    path: /api/v1/device/{deviceId}/HeatPriority
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HeatPriority
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HVACModeStatus
+  get:
+    path: /api/v1/device/{deviceId}/HVACModeStatus
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HVACModeStatus
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: OccupancyStatus
+  get:
+    path: /api/v1/device/{deviceId}/OccupancyStatus
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - OccupancyStatus
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorSpType
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorSpType
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorSpType
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: OccDetection
+  get:
+    path: /api/v1/device/{deviceId}/OccDetection
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - OccDetection
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: WindowContact
+  get:
+    path: /api/v1/device/{deviceId}/WindowContact
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - WindowContact
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensorLock
+  get:
+    path: /api/v1/device/{deviceId}/ComSensorLock
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensorLock
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: HeatStgs
+  get:
+    path: /api/v1/device/{deviceId}/HeatStgs
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - HeatStgs
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: DuctHeatStgs
+  get:
+    path: /api/v1/device/{deviceId}/DuctHeatStgs
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - DuctHeatStgs
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EcoVueCoolStatus
+  get:
+    path: /api/v1/device/{deviceId}/EcoVueCoolStatus
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EcoVueCoolStatus
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EcoVueHeatStatus
+  get:
+    path: /api/v1/device/{deviceId}/EcoVueHeatStatus
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EcoVueHeatStatus
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EquipType1
+  get:
+    path: /api/v1/device/{deviceId}/EquipType1
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EquipType1
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EquipType2
+  get:
+    path: /api/v1/device/{deviceId}/EquipType2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EquipType2
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: EquipType3
+  get:
+    path: /api/v1/device/{deviceId}/EquipType3
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - EquipType3
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: BalancingOvr
+  get:
+    path: /api/v1/device/{deviceId}/BalancingOvr
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - BalancingOvr
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: VPACCStatus
+  get:
+    path: /api/v1/device/{deviceId}/VPACCStatus
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - VPACCStatus
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: CodeType
+  get:
+    path: /api/v1/device/{deviceId}/CodeType
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - CodeType
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: PID_Cool
+  get:
+    path: /api/v1/device/{deviceId}/PID_Cool
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - PID_Cool
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: PID_Heat
+  get:
+    path: /api/v1/device/{deviceId}/PID_Heat
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - PID_Heat
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: PID_CO2
+  get:
+    path: /api/v1/device/{deviceId}/PID_CO2
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - PID_CO2
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: PID_DischAir
+  get:
+    path: /api/v1/device/{deviceId}/PID_DischAir
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - PID_DischAir
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: ComSensor1_SpaceTemp
+  get:
+    path: /api/v1/device/{deviceId}/ComSensor1_SpaceTemp
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - ComSensor1_SpaceTemp
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: Schedule1
+  get:
+    path: /api/v1/device/{deviceId}/Schedule1
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - Schedule1
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: VAVDifferentialPressure
+  get:
+    path: /api/v1/device/{deviceId}/VAVDifferentialPressure
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - VAVDifferentialPressure
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: InternalActuator_ActuatorSetpoint
+  get:
+    path: /api/v1/device/{deviceId}/InternalActuator_ActuatorSetpoint
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - InternalActuator_ActuatorSetpoint
+    - code: "400"
+      description: BadRequest
+      expectedvalues: []
+    - code: "404"
+      description: Not Found
+      expectedvalues: []
+    - code: "500"
+      description: FailedTransaction
+      expectedvalues: []
+- name: InternalActuator_ActuatorPosition
+  get:
+    path: /api/v1/device/{deviceId}/InternalActuator_ActuatorPosition
+    responses:
+    - code: "200"
+      description: Success
+      expectedvalues:
+      - InternalActuator_ActuatorPosition
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -2091,9 +4289,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/CW_SP
+    path: /api/v1/device/{deviceId}/InternalActuator_ActuatorPosition
     parameterNames:
-    - CW_SP
+    - InternalActuator_ActuatorPosition
     responses:
     - code: "200"
       description: Success
@@ -2107,14 +4305,14 @@ coreCommands:
     - code: "500"
       description: FailedTransaction
       expectedvalues: []
-- name: LowCWTemp
+- name: AnalogValue3
   get:
-    path: /api/v1/device/{deviceId}/LowCWTemp
+    path: /api/v1/device/{deviceId}/AnalogValue3
     responses:
     - code: "200"
       description: Success
       expectedvalues:
-      - LowCWTemp
+      - AnalogValue3
     - code: "400"
       description: BadRequest
       expectedvalues: []
@@ -2125,1641 +4323,9 @@ coreCommands:
       description: FailedTransaction
       expectedvalues: []
   put:
-    path: /api/v1/device/{deviceId}/LowCWTemp
+    path: /api/v1/device/{deviceId}/AnalogValue3
     parameterNames:
-    - LowCWTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: HighCWTemp
-  get:
-    path: /api/v1/device/{deviceId}/HighCWTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - HighCWTemp
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/HighCWTemp
-    parameterNames:
-    - HighCWTemp
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: UseChillerStaging
-  get:
-    path: /api/v1/device/{deviceId}/UseChillerStaging
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - UseChillerStaging
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/UseChillerStaging
-    parameterNames:
-    - UseChillerStaging
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: UseTowerStaging
-  get:
-    path: /api/v1/device/{deviceId}/UseTowerStaging
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - UseTowerStaging
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/UseTowerStaging
-    parameterNames:
-    - UseTowerStaging
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: FirstStgTowerOffDB
-  get:
-    path: /api/v1/device/{deviceId}/FirstStgTowerOffDB
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - FirstStgTowerOffDB
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/FirstStgTowerOffDB
-    parameterNames:
-    - FirstStgTowerOffDB
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: SecondStgTowerOnDB
-  get:
-    path: /api/v1/device/{deviceId}/SecondStgTowerOnDB
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - SecondStgTowerOnDB
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/SecondStgTowerOnDB
-    parameterNames:
-    - SecondStgTowerOnDB
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: ThirdStageTowerOnDB
-  get:
-    path: /api/v1/device/{deviceId}/ThirdStageTowerOnDB
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - ThirdStageTowerOnDB
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/ThirdStageTowerOnDB
-    parameterNames:
-    - ThirdStageTowerOnDB
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWHighLimit
-  get:
-    path: /api/v1/device/{deviceId}/CWHighLimit
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWHighLimit
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWHighLimit
-    parameterNames:
-    - CWHighLimit
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWLowLimit
-  get:
-    path: /api/v1/device/{deviceId}/CWLowLimit
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWLowLimit
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWLowLimit
-    parameterNames:
-    - CWLowLimit
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: TowerApproachSP
-  get:
-    path: /api/v1/device/{deviceId}/TowerApproachSP
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - TowerApproachSP
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/TowerApproachSP
-    parameterNames:
-    - TowerApproachSP
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWSPHigh
-  get:
-    path: /api/v1/device/{deviceId}/CWSPHigh
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWSPHigh
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWSPHigh
-    parameterNames:
-    - CWSPHigh
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWSPLow
-  get:
-    path: /api/v1/device/{deviceId}/CWSPLow
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWSPLow
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWSPLow
-    parameterNames:
-    - CWSPLow
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: SingleTowerOperation
-  get:
-    path: /api/v1/device/{deviceId}/SingleTowerOperation
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - SingleTowerOperation
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/SingleTowerOperation
-    parameterNames:
-    - SingleTowerOperation
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: MinPumpRuntime
-  get:
-    path: /api/v1/device/{deviceId}/MinPumpRuntime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - MinPumpRuntime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/MinPumpRuntime
-    parameterNames:
-    - MinPumpRuntime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWPump1Alarm
-  get:
-    path: /api/v1/device/{deviceId}/CHWPump1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWPump1Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CHWPump1Alarm
-    parameterNames:
-    - CHWPump1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWPump2Alarm
-  get:
-    path: /api/v1/device/{deviceId}/CHWPump2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWPump2Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CHWPump2Alarm
-    parameterNames:
-    - CHWPump2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWPump1Alarm
-  get:
-    path: /api/v1/device/{deviceId}/CWPump1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWPump1Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWPump1Alarm
-    parameterNames:
-    - CWPump1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWPump2Alarm
-  get:
-    path: /api/v1/device/{deviceId}/CWPump2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWPump2Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWPump2Alarm
-    parameterNames:
-    - CWPump2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: LeadLagInterval
-  get:
-    path: /api/v1/device/{deviceId}/LeadLagInterval
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - LeadLagInterval
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/LeadLagInterval
-    parameterNames:
-    - LeadLagInterval
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: PidLoop1
-  get:
-    path: /api/v1/device/{deviceId}/PidLoop1
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - PidLoop1
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: MinChillerOnTime
-  get:
-    path: /api/v1/device/{deviceId}/MinChillerOnTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - MinChillerOnTime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/MinChillerOnTime
-    parameterNames:
-    - MinChillerOnTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: MinChillerOffTime
-  get:
-    path: /api/v1/device/{deviceId}/MinChillerOffTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - MinChillerOffTime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/MinChillerOffTime
-    parameterNames:
-    - MinChillerOffTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: ChillerStagerPropBand
-  get:
-    path: /api/v1/device/{deviceId}/ChillerStagerPropBand
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - ChillerStagerPropBand
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/ChillerStagerPropBand
-    parameterNames:
-    - ChillerStagerPropBand
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: ChillerStagerIntTime
-  get:
-    path: /api/v1/device/{deviceId}/ChillerStagerIntTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - ChillerStagerIntTime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/ChillerStagerIntTime
-    parameterNames:
-    - ChillerStagerIntTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: ChillerRampTime
-  get:
-    path: /api/v1/device/{deviceId}/ChillerRampTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - ChillerRampTime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/ChillerRampTime
-    parameterNames:
-    - ChillerRampTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower1Fan1Alarm
-  get:
-    path: /api/v1/device/{deviceId}/Tower1Fan1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower1Fan1Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Tower1Fan1Alarm
-    parameterNames:
-    - Tower1Fan1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower2FanAlarm
-  get:
-    path: /api/v1/device/{deviceId}/Tower2FanAlarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower2FanAlarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Tower2FanAlarm
-    parameterNames:
-    - Tower2FanAlarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: PidLoop2
-  get:
-    path: /api/v1/device/{deviceId}/PidLoop2
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - PidLoop2
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: TowerStagerPropBand
-  get:
-    path: /api/v1/device/{deviceId}/TowerStagerPropBand
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - TowerStagerPropBand
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/TowerStagerPropBand
-    parameterNames:
-    - TowerStagerPropBand
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: TowerStagerIntTime
-  get:
-    path: /api/v1/device/{deviceId}/TowerStagerIntTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - TowerStagerIntTime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/TowerStagerIntTime
-    parameterNames:
-    - TowerStagerIntTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: TowerRampTime
-  get:
-    path: /api/v1/device/{deviceId}/TowerRampTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - TowerRampTime
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/TowerRampTime
-    parameterNames:
-    - TowerRampTime
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: OutsideAir
-  get:
-    path: /api/v1/device/{deviceId}/OutsideAir
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - OutsideAir
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/OutsideAir
-    parameterNames:
-    - OutsideAir
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: PumpStopDelay
-  get:
-    path: /api/v1/device/{deviceId}/PumpStopDelay
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - PumpStopDelay
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/PumpStopDelay
-    parameterNames:
-    - PumpStopDelay
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWPump1AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/CHWPump1AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWPump1AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CHWPump1AlarmReset
-    parameterNames:
-    - CHWPump1AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: FreezeProtection
-  get:
-    path: /api/v1/device/{deviceId}/FreezeProtection
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - FreezeProtection
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/FreezeProtection
-    parameterNames:
-    - FreezeProtection
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CHWPump2AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/CHWPump2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CHWPump2AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CHWPump2AlarmReset
-    parameterNames:
-    - CHWPump2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWPump1AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/CWPump1AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWPump1AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWPump1AlarmReset
-    parameterNames:
-    - CWPump1AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: CWPump2AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/CWPump2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - CWPump2AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/CWPump2AlarmReset
-    parameterNames:
-    - CWPump2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower1FanAlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/Tower1FanAlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower1FanAlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Tower1FanAlarmReset
-    parameterNames:
-    - Tower1FanAlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: TowerFan2AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/TowerFan2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - TowerFan2AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/TowerFan2AlarmReset
-    parameterNames:
-    - TowerFan2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: OutsideHumidity
-  get:
-    path: /api/v1/device/{deviceId}/OutsideHumidity
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - OutsideHumidity
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/OutsideHumidity
-    parameterNames:
-    - OutsideHumidity
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Chiller1AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/Chiller1AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Chiller1AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Chiller1AlarmReset
-    parameterNames:
-    - Chiller1AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Chiller1Alarm
-  get:
-    path: /api/v1/device/{deviceId}/Chiller1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Chiller1Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Chiller1Alarm
-    parameterNames:
-    - Chiller1Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Chiller2AlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/Chiller2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Chiller2AlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Chiller2AlarmReset
-    parameterNames:
-    - Chiller2AlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Chiller2Alarm
-  get:
-    path: /api/v1/device/{deviceId}/Chiller2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Chiller2Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Chiller2Alarm
-    parameterNames:
-    - Chiller2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower2FanAlarmReset
-  get:
-    path: /api/v1/device/{deviceId}/Tower2FanAlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower2FanAlarmReset
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Tower2FanAlarmReset
-    parameterNames:
-    - Tower2FanAlarmReset
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: Tower1Fan2Alarm
-  get:
-    path: /api/v1/device/{deviceId}/Tower1Fan2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - Tower1Fan2Alarm
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/Tower1Fan2Alarm
-    parameterNames:
-    - Tower1Fan2Alarm
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: DewPoint
-  get:
-    path: /api/v1/device/{deviceId}/DewPoint
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - DewPoint
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/DewPoint
-    parameterNames:
-    - DewPoint
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: ChillerSelect
-  get:
-    path: /api/v1/device/{deviceId}/ChillerSelect
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - ChillerSelect
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/ChillerSelect
-    parameterNames:
-    - ChillerSelect
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues: []
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-- name: PlantOutsideAir
-  get:
-    path: /api/v1/device/{deviceId}/PlantOutsideAir
-    responses:
-    - code: "200"
-      description: Success
-      expectedvalues:
-      - PlantOutsideAir
-    - code: "400"
-      description: BadRequest
-      expectedvalues: []
-    - code: "404"
-      description: Not Found
-      expectedvalues: []
-    - code: "500"
-      description: FailedTransaction
-      expectedvalues: []
-  put:
-    path: /api/v1/device/{deviceId}/PlantOutsideAir
-    parameterNames:
-    - PlantOutsideAir
+    - AnalogValue3
     responses:
     - code: "200"
       description: Success

@@ -38,11 +38,25 @@ func (n NiagaraObject) GetDefaultUnits() string {
 	str := strings.Split(n.Facets, ";")
 	runes := []rune(str[0])
 	switchOn := string(runes[0:4])
+	//fmt.Println(str[0])
 	switch switchOn {
 	case "unit":
 		return string(runes[8:])
 	case "true":
-		return "TRUE/FALSE"
+		tf := strings.Split(str[0], "|")
+		ti := strings.Index(tf[0], "s:")
+		fi := strings.Index(tf[1], "s:")
+		tt := tf[0][ti+2:len(tf[0])]
+		ft := tf[1][fi+2:len(tf[1])]
+		sstr := []string{tt, ft}
+		str := strings.Join(sstr, "/")
+		return str
+	case "rang":
+		i := strings.Index(str[0], "{")
+		ranges := str[0][i+1:len(str[0])-1]
+		str := strings.Split(ranges, ",")
+		res := strings.Join(str, "/")
+		return res
 	}
 	return ""
 }
@@ -62,7 +76,7 @@ func (n NiagaraObject) GetUnits() string {
 }
 
 func (n NiagaraObject) GetRW() string {
-	if n.Write == "OK"{
+	if n.Write == "OK" || n.Write =="Writable"{
 		return "RW"
 	} else {
 		return "R"

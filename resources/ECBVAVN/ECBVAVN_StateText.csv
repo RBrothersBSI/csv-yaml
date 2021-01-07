@@ -1,0 +1,21 @@
+#State Text Reference
+#Reference Number,Text 1 or Inactive-Text,Text 2 or Active-Text,Text 3,Text 4,Text 5,Text 6,Text 7,Text 8,Text 9,Text 10,Text 11,Text 12,Text 13
+1,Active,Inactive
+2,False,True
+3,Occupied,Unoccupied,Bypass,Standby
+4,Clockwise,CounterClockwise
+5,No,Yes
+6,Auto,Heat,MrngWrmup,Cool,NightPurge,PreCool,Off
+7,Deg.C,Deg.F
+8,l/s,cfm,m3/h
+9,DuctHeater,PerimeterHeat,Simultaneous
+10,CoolHeatSP,SpOffset
+11,On,Off,Unconfig
+12,Close,Open,Unconfig
+13,FullAccess,Sp&Balancing,SpOnly,NoAccess
+14,None,1Stage,2Stages,3Stages
+15,1Leaf,2Leaves,3Leaves,4Leaves
+16,Unconfig,Perim,Duct
+17,NormalOperation,GotoMinFlow,GotoMinFlowHeat,GotoMaxFlowCool,GotoMaxFlowHeat,Goto75%MaxFlow,Goto80%MaxFlow,Goto85%MaxFlow,Goto90%MaxFlow,Goto95%MaxFlow,FullOpen,FullClose,DoDamperInit
+18,Normal,LowSpaceTemp,HighSpaceTemp,LowDischTemp,HighDischTemp,UnstableAirFlow,LowAirFlow,HighAirFlow
+19,CoolingOnly,Reheat,SeriesFan,ParallelFan,DDuctSnapActing,DDuctMix1Sens,DDuctMix2Sens,DDuctConstVol
